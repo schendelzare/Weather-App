@@ -1,0 +1,171 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.container::before {
+  content: "";
+  background: url("../../assets/weather.jpg") no-repeat center center;
+
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container .search {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+.home {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.home img {
+}
+
+.search input {
+  margin: 2rem 0 0 0;
+  padding: 0.8rem;
+  border-radius: 15px;
+  border-style: solid;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+::placeholder {
+  color: rgb(146, 144, 144);
+}
+
+input:focus {
+  outline: none !important;
+}
+
+.section {
+  max-width: 700px;
+  min-height: 700px;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  -webkit-animation: slide-in-bck-center 0.7s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bck-center 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.container .top {
+  width: 100%;
+  margin: 1rem auto;
+}
+.container .description {
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
+}
+
+.container .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container .error {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.start {
+  max-width: 700px;
+}
+
+.container p {
+  font-size: 1.6rem;
+}
+@media (max-height: 915px) {
+  .home img {
+    margin-top: 3rem;
+    width: 250px;
+  }
+  .home p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-height: 900px) {
+  .home img {
+    margin-top: 3rem;
+    width: 200px;
+  }
+  .home p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-height: 851px) {
+  .section {
+    min-height: 650px;
+  }
+}
+@media (max-height: 851px) {
+  .section {
+    min-height: 580px;
+  }
+}
+
+@media (max-height: 740px) {
+  .section {
+    min-height: 570px;
+  }
+}
+
+@media (max-height: 680px) {
+  .section {
+    min-height: 460px;
+  }
+  .home img {
+    width: 150px;
+  }
+  .home p {
+    font-size: 1rem;
+  }
+}
+@media (max-height: 600px) {
+  .section {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .bottom p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-height: 655px) and (max-width: 300px) {
+  .section {
+    min-height: 500px;
+  }
+  .container p {
+    font-size: 0.8rem;
+  }
+}
